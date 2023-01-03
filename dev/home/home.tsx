@@ -4,7 +4,7 @@ import type { Component } from "solid-js";
 import { useIntl, defineMessages } from "../../src";
 import logo from "../logo.svg";
 
-import styles from "./App.module.css";
+import styles from "./home.module.css";
 
 const messages = defineMessages({
   greeting: {
@@ -21,13 +21,13 @@ const messages = defineMessages({
   },
 });
 
-interface AppElement {
+interface HomeElement {
   onLangChange: (lang: string) => void;
 }
 
 const appLang: Record<string, string> = { en: "English", es: "Español", pt: "Português" };
 
-const App: Component<AppElement> = (props) => {
+const Home: Component<HomeElement> = (props) => {
   const intl = useIntl();
 
   return (
@@ -62,4 +62,4 @@ const App: Component<AppElement> = (props) => {
   );
 };
 
-export default App;
+export default Home;
