@@ -20,7 +20,9 @@ const getTranslations = (lang: string): Promise<Record<string, string>> => {
 
 const Root: Component = () => {
   const [lang, setLanguage] = createSignal("en");
-  const [translations] = createResource<Record<string, string>, string>(lang, getTranslations, { initialValue: {}});
+  const [translations] = createResource<Record<string, string>, string>(lang, getTranslations, {
+    initialValue: {},
+  });
 
   const handleLangChange = (newLang: string): void => {
     setLanguage(newLang);
