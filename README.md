@@ -1,36 +1,49 @@
 <p>
-  <img width="100%" src="https://assets.solidjs.com/banner?type={{name_of_lib}}&background=tiles&project=%20" alt="{{name_of_lib}}">
+  <img width="100%" src="https://assets.solidjs.com/banner?type=solid-intl&background=tiles&project=%20" alt="solid-intl">
 </p>
 
-# {{name_of_lib}}
+# Solid Intl
 
 [![pnpm](https://img.shields.io/badge/maintained%20with-pnpm-cc00ff.svg?style=for-the-badge&logo=pnpm)](https://pnpm.io/)
 
-{{desc_of_lib}}
-
-> **Note** After using this template, you have to search and replace all `{{name_of_lib}}` and similar strings
-> with appropriate texts.
->
-> `{{name_of_lib}}` should be a **kebab-case** string representing the name of you monorepo.
->
-> `{{desc_of_lib}}` should be a **Normal case** string with the description of the repository.
->
-> `{{me}}` should be a **kebab-case** string from your profile URL.
+A universal internationalization (i18n) for Solid inspired by React Intl & FormatJS.
 
 ## Quick start
 
 Install it:
 
 ```bash
-npm i {{name_of_lib}}
+npm i @cookbook/solid-intl
 # or
-yarn add {{name_of_lib}}
+yarn add @cookbook/solid-intl
 # or
-pnpm add {{name_of_lib}}
+pnpm add @cookbook/solid-intl
 ```
 
-Use it:
+Wrap your application with an i18n Context
 
 ```tsx
-import {{name_of_lib}} from '{{name_of_lib}}'
+import { IntlProvider } from '@cookbook/solid-intl'
+
+render(() =>
+  <IntlProvider locale={usersLocale} messages={translationsForUsersLocale}>
+    <App />
+  </IntlProvider>,
+  document.getElementById("root")!);
 ```
+
+Using
+
+````tsx
+import { useIntl } from '@cookbook/solid-intl';
+
+function Component(props) {
+  const { intl } = useIntl();
+
+  return intl.formatMessage({
+    // The whole `intl.formatMessage` is required so we can extract
+    id: 'foo',
+    defaultMessage: 'foo',
+  })
+}
+````

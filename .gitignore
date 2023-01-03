@@ -4,3 +4,6 @@ gitignore
 
 # VSC Settings
 .vscode/settings.json
+
+# InteliJ Settings
+.idea
