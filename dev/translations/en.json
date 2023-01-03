@@ -1,0 +1,5 @@
+{
+  "app.greeting": "Hello, {name}!",
+  "app.cta": "Change the language to see solid-intl in action!",
+  "app.link": "<a>Learn Solid</a> "
+}
