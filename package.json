@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "name": "'@cookbook/solid-intl'",
+  "name": "@cookbook/solid-intl",
   "description": "A universal internationalization (i18n) for Solid inspired by React Intl & FormatJS",
   "license": "MIT",
   "author": "Marcos Gonçalves <contact@themgoncalves.com>",
