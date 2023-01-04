@@ -16,7 +16,6 @@
 
 A universal internationalization (i18n) for Solid inspired by React Intl & FormatJS.
 
-
 ## Quick start
 
 ### Install it:
@@ -61,6 +60,46 @@ function Component(props) {
   return intl.formatMessage(messages.greeting) // outputs: Hello world!
 }
 ````
+
+______
+# Table of contents
+gi
+- [API](#api)
+  - [`<IntlProvider />`](#intlprovider-)
+    - [locale, formats, and messages](#locale-formats-and-messages)
+    - [defaultLocale and defaultFormats](#defaultlocale-and-defaultformats)
+    - [defaultRichTextElements](#defaultrichtextelements)
+    - [onError](#onerror)
+    - [onWarn](#onwarn)
+  - [`useIntl()` hook](#useintl-hook)
+    - [formatDate](#formatdate)
+    - [formatTime](#formattime)
+    - [formatRelativeTime](#formatrelativetime)
+    - [formatNumber](#formatnumber)
+    - [formatPlural](#formatplural)
+    - [formatList](#formatlist)
+    - [formatDisplayName](#formatdisplayname)
+    - [formatMessage](#formatmessage)
+    - [defineMessages/defineMessage](#definemessagesdefinemessage)
+- [Message Extraction](#message-extraction)
+  - [Extraction](#extraction)
+- [Basic Internationalization Principles](#basic-internationalization-principles)
+  - [What Is Internationalization and Why Does It Matter?](#what-is-internationalization-and-why-does-it-matter)
+  - [Locales: Language and Region](#locales-language-and-region)
+  - [Translating Strings](#translating-strings)
+- [Message Syntax](#message-syntax)
+  - [Message Descriptor](#message-descriptor)
+  - [Message Formatting Fallbacks](#message-formatting-fallbacks)
+  - [Formatting Message Argument](#formatting-message-argument)
+    - [`number` formatting](#number-formatting)
+    - [`date` formatting](#date-formatting)
+    - [`time` formatting](#time-formatting)
+    - [Supported DateTime Skeleton](#supported-datetime-skeleton)
+    - [`{select}` Format](#select-format)
+    - [`{plural}` Format](#plural-format)
+    - [`{selectordinal}` Format](#selectordinal-format)
+    - [Rich Text Formatting](#rich-text-formatting)
+    - [Quoting / Escaping](#quoting--escaping)
 
 ______
 
