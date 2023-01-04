@@ -4,6 +4,5 @@
     "noEmit": true,
     "typeRoots": ["./node_modules/@types"]
   },
-  "include": ["test"],
   "exclude": ["node_modules"]
 }
