@@ -5,11 +5,24 @@ import type { IntlShape } from "@formatjs/intl";
 import type { FlowComponent } from "solid-js";
 
 import processConfig from "./process-config";
+import is from "./utils/is";
 import type { IntlConfig } from "./types";
 
 const IntlContext = createContext<IntlShape>();
 
 const IntlProvider: FlowComponent<IntlConfig> = (props) => {
+  if (is.nullish(props.locale)) {
+    throw new ReferenceError(
+      '[solid-intl]: <IntlProvider /> expects a "locale" which was not configured. See https://formatjs.io/docs/react-intl/api#intlshape for more details',
+    );
+  }
+
+  if (is.nullish(props.messages)) {
+    throw new ReferenceError(
+      '[solid-intl]: <IntlProvider /> expects translation "messages" which was not configured. See https://formatjs.io/docs/react-intl/api#intlshape for more details',
+    );
+  }
+
   const cache = createMutable<IntlCache>(createIntlCache());
   const [intl, setIntl] = createStore(createIntl(processConfig(props), cache));
 

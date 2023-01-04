@@ -30,6 +30,10 @@ const appLang: Record<string, string> = { en: "English", es: "Español", pt: "Po
 const Home: Component<HomeElement> = (props) => {
   const intl = useIntl();
 
+  const handleOnLangChange = (lang: string): void => {
+    props.onLangChange(lang);
+  };
+
   return (
     <div class={styles.App}>
       <header class={styles.header}>
@@ -51,7 +55,7 @@ const Home: Component<HomeElement> = (props) => {
         <div style={{ "margin-top": "20px" }}>
           <For each={Object.keys(appLang)}>
             {(lang) => (
-              <button class={styles.button} onClick={() => props.onLangChange(lang)}>
+              <button class={styles.button} onClick={[handleOnLangChange, lang]}>
                 {appLang[lang]}
               </button>
             )}

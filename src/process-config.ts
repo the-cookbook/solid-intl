@@ -3,7 +3,7 @@ import { DEFAULT_INTL_CONFIG } from "@formatjs/intl";
 
 import type { IntlConfig } from "./types";
 
-function processConfig<T extends IntlConfig = IntlConfig>(config: T): IntlConfig {
+function processConfig<T extends IntlConfig = IntlConfig>(config: T): Readonly<IntlConfig> {
   return mergeProps(DEFAULT_INTL_CONFIG, {
     locale: config.locale,
     timeZone: config.timeZone,
