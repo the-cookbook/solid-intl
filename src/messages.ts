@@ -1,3 +1,3 @@
-import { defineMessages } from "@formatjs/intl";
+import { defineMessages, defineMessage } from "@formatjs/intl";
 
-export { defineMessages };
+export { defineMessages, defineMessage };
