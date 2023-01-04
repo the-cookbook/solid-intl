@@ -11,8 +11,6 @@
 [![Known Vulnerabilities][vulnerabilities-image]][vulnerabilities-url]
 [![GitHub issues][issues-image]][issues-url]
 [![Awesome][awesome-image]][awesome-url]
-[![install size][install-size-image]][install-size-url]
-[![gzip size][gzip-size-image]][gzip-size-url]
 
 A universal internationalization (i18n) for Solid inspired by React Intl & FormatJS.
 
@@ -935,7 +933,3 @@ Two consecutive ASCII apostrophes represents one ASCII apostrophe, similar to `%
 [issues-url]: https://github.com/the-cookbook/solid-intl/issues
 [awesome-image]: https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg
 [awesome-url]: https://github.com/the-cookbook/solid-intl
-[install-size-image]: https://packagephobia.now.sh/badge?p=@cookbook/solid-intl
-[install-size-url]: https://packagephobia.now.sh/result?p=@cookbook/solid-intl
-[gzip-size-image]: http://img.badgesize.io/https://unpkg.com/@cookbook/solid-intl/lib/mapper.min.js?compression=gzip
-[gzip-size-url]: https://unpkg.com/@cookbook/solid-intl/lib/mapper.min.js
