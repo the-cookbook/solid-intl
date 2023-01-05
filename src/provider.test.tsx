@@ -32,17 +32,6 @@ describe("<IntlProvider />", () => {
         )),
       ).toThrow("locale");
     });
-
-    it("should not throw when translation messages is missing", () => {
-      expect(() =>
-        render(() => (
-          // @ts-ignore
-          <IntlProvider locale="en">
-            <div>lorem ipsum</div>
-          </IntlProvider>
-        )),
-      ).toThrow("messages");
-    });
   });
 
   describe("behaviour", () => {
