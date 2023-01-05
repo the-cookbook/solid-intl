@@ -61,7 +61,7 @@ function Component(props) {
 
 ______
 # Table of contents
-gi
+
 - [API](#api)
   - [`<IntlProvider />`](#intlprovider-)
     - [locale, formats, and messages](#locale-formats-and-messages)
