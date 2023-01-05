@@ -1,4 +1,4 @@
-import { createEffect, createContext } from "solid-js";
+import { createComputed, createContext } from "solid-js";
 import { createStore, createMutable } from "solid-js/store";
 import { IntlCache, createIntl, createIntlCache } from "@formatjs/intl";
 import type { IntlShape } from "@formatjs/intl";
@@ -17,16 +17,10 @@ const IntlProvider: FlowComponent<IntlConfig> = (props) => {
     );
   }
 
-  if (is.nullish(props.messages)) {
-    throw new ReferenceError(
-      '[solid-intl]: <IntlProvider /> expects translation "messages" which was not configured. See https://formatjs.io/docs/react-intl/api#intlshape for more details',
-    );
-  }
-
   const cache = createMutable<IntlCache>(createIntlCache());
   const [intl, setIntl] = createStore(createIntl(processConfig(props), cache));
 
-  createEffect(() => {
+  createComputed(() => {
     setIntl(createIntl(processConfig(props), cache));
   });
 
