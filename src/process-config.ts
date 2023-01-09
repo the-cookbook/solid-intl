@@ -12,6 +12,7 @@ function processConfig<T extends IntlConfig = IntlConfig>(config: T): Readonly<I
     messages: config.messages,
     defaultLocale: config.defaultLocale,
     defaultFormats: config.defaultFormats,
+    defaultRichTextElements: config.defaultRichTextElements,
     onError: config.onError,
     onWarn: config.onWarn,
   });

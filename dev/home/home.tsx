@@ -1,4 +1,4 @@
-import { For } from "solid-js";
+import { For, JSXElement } from "solid-js";
 import type { Component } from "solid-js";
 
 import { useIntl, defineMessages } from "../../src";
@@ -18,6 +18,10 @@ const messages = defineMessages({
   link: {
     id: "app.link",
     defaultMessage: "<a>Learn Solid</a> ",
+  },
+  bold: {
+    id: "app.bold",
+    defaultMessage: "We <b>love</b> Solid!",
   },
 });
 
@@ -40,7 +44,8 @@ const Home: Component<HomeElement> = (props) => {
         <img src={logo} class={styles.logo} alt="logo" />
         <p>{intl.formatMessage(messages.greeting, { name: "gentleman" })}</p>
         <p>{intl.formatMessage(messages.cta)}</p>
-        {intl.formatMessage(messages.link, {
+        <p>{intl.formatMessage(messages.bold)}</p>
+        {intl.formatMessage<JSXElement>(messages.link, {
           a: (str) => (
             <a
               class={styles.link}
