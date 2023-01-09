@@ -89,5 +89,19 @@ describe("useIntl()", () => {
 
       expect(screen.getByText(es["app.greeting"])).toBeInTheDocument();
     });
+
+    it("should format messages with defaultRichTextElements specified", () => {
+      render(() => (
+        <IntlProvider
+          locale="en"
+          messages={{ "app.greeting": "My <bar>message</bar> formatted." }}
+          defaultRichTextElements={{ bar: (chunks) => <span data-testid="bar">{chunks}</span> }}
+        >
+          <Foo />
+        </IntlProvider>
+      ));
+
+      expect(screen.getAllByTestId("bar")).toHaveLength(1);
+    });
   });
 });
