@@ -1,5 +1,5 @@
-import { For, JSXElement } from "solid-js";
-import type { Component } from "solid-js";
+import { For } from "solid-js";
+import type { Component, JSXElement } from "solid-js";
 
 import { useIntl, defineMessages } from "../../src";
 import logo from "../logo.svg";
