@@ -33,8 +33,9 @@ const Root: Component = () => {
       locale={lang()}
       messages={translations()}
       defaultRichTextElements={{
-        b: (chunks) => <b>{chunks}</b>
-      }}>
+        b: (chunks) => <b>{chunks}</b>,
+      }}
+    >
       <Home onLangChange={handleLangChange} />
     </IntlProvider>
   );
