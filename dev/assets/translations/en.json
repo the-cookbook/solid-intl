@@ -1,5 +1,6 @@
 {
   "app.greeting": "Hello, {name}!",
   "app.cta": "Change the language to see solid-intl in action!",
-  "app.link": "<a>Learn Solid</a> "
+  "app.link": "<a>Learn Solid</a> ",
+  "app.bold": "We <b>love</a> Solid!"
 }

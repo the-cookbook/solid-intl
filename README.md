@@ -120,7 +120,7 @@ interface IntlConfig {
   messages: Record<MessageIds, string> | Record<MessageIds, MessageFormatElement[]>;
   defaultLocale?: string;
   defaultFormats?: CustomFormats;
-  defaultRichTextElements?: Record<string, FormatXMLElementFn<T>>;
+  defaultRichTextElements?: Record<string, FormatXMLElementFn<JSXElement>>;
   onError(err: MissingTranslationError | MessageFormatError | MissingDataError | InvalidConfigError | UnsupportedFormatterError | FormatError)?: void;
   onWarn(warning: string)?: void;
 }

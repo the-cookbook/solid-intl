@@ -1,12 +1,11 @@
 import { createComputed, createContext } from "solid-js";
 import { createStore, createMutable } from "solid-js/store";
 import { IntlCache, createIntl, createIntlCache } from "@formatjs/intl";
-import type { IntlShape } from "@formatjs/intl";
 import type { FlowComponent } from "solid-js";
 
 import processConfig from "./process-config";
 import is from "./utils/is";
-import type { IntlConfig } from "./types";
+import type { IntlConfig, IntlShape } from "./types";
 
 const IntlContext = createContext<IntlShape>();
 
