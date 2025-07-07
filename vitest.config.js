@@ -20,7 +20,7 @@ export default defineConfig({
       web: [/\.[jt]sx?$/]
     },
     deps: {
-      inline: [/solid-js/, /solid-testing-library/],
+      inline: [/solid-js/, /@solidjs\/testing-library/],
     },
   },
   resolve: {

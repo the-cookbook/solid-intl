@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { screen, render } from "solid-testing-library";
+import { screen, render } from "@solidjs/testing-library";
 
 import IntlProvider from "../src/provider";
 
