@@ -1,10 +1,10 @@
 {
-  "version": "0.1.2",
+  "version": "0.1.3",
   "name": "@cookbook/solid-intl",
   "description": "A universal internationalization (i18n) for Solid inspired by React Intl & FormatJS",
   "license": "MIT",
   "author": "Marcos Gonçalves <contact@themgoncalves.com>",
-  "contributors": ["Matt Wells (https://github.com/lvl-mattwells)"],
+  "contributors": ["Matt Wells (https://github.com/lvl-mattwells)", "Simon Shiki (https://github.com/SimonShiki)"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/the-cookbook/solid-intl.git"
